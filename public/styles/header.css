@@ -1,0 +1,26 @@
+header {
+  background-image: url("../images/header-background.png");
+  background-repeat: repeat;
+  background-color: rgb(172, 71, 5);
+  height: 500px;
+  width: 100%;
+}
+
+.avatar {
+  position: relative;
+  text-align: center;
+  top: 30%;
+}
+
+.avatar-name {
+  top: 23%;
+  color: whitesmoke;
+  font-family: "Bungee";
+}
+
+
+/* The header should have a height of 400px and be 100% the width of it's parent container
+The avatar should be centered vertically and horizontally (Hint: you may have to play around with position: relative and position: absolute to properly position the avatar)
+The name should be centered below the avatar
+The background should be a different colour than the nav and the body
+The background-image should be a transparent pattern. Feel free to use this tool to assist: https://www.transparenttextures.com/ */
