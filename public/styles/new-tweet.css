@@ -1,0 +1,17 @@
+form {
+  border-bottom: 4px solid darkslategray;
+  font-size: 1.5em
+}
+
+#tweet-text {
+  background: transparent;
+  border-style: none;
+  border: none;
+  resize: none;
+}
+
+button {
+  position: absolute;
+  left: 0;
+  top: 32%
+}
