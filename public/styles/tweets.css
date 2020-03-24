@@ -12,12 +12,13 @@
 #tweet-list article {
   margin-bottom: 4rem;
   border: 0.3rem solid darkslategray;
-  padding: 2.3%;
+  padding: 2.2rem;
 }
 
 #tweet-list p {
   font-weight: 600;
-  padding-left: 0.4rem;
+  margin-bottom: 3rem;
+  margin-top: 4rem;
 }
 
 #tweet-list footer {
@@ -25,6 +26,7 @@
   padding-top: 1rem;
   font-size: 1.4rem;
   padding-left: 0.6rem;
+  width: 100%
 }
 
 #tweet-list footer span {
@@ -49,12 +51,12 @@
   transform: skewX(0.5deg) skewY(0.05deg);
 }
 
-#handle {
-  display:none;
+.handle {
+  display: none;
   float: right;
-  color: rgba(74, 42, 160, 0.24)
+  color: rgba(74, 42, 160, 0.24);
 }
 
-#tweet-list article:hover #handle{
- display: inline;
+#tweet-list article:hover .handle {
+  display: inline;
 }
