@@ -1,6 +1,5 @@
 form {
   border-bottom: 4px solid darkslategray;
-  font-size: 1.3em;
   position: relative;
   margin-top: 4%;
 }
@@ -12,7 +11,6 @@ form {
   resize: none;
   outline: none;
   width: 100%;
-  /* margin-bottom: -em; */
 }
 
 button,
@@ -32,6 +30,7 @@ button {
 
 .counter {
   right: 0;
+  font-size: 1.1em
 }
 
 ::placeholder {
