@@ -37,3 +37,7 @@ button {
 ::placeholder {
   font-style: italic;
 }
+
+.invalid {
+  color: red;
+}

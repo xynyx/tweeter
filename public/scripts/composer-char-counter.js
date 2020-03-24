@@ -1,8 +1,14 @@
 // Ensure DOM has loaded first (shortform for $(document).ready(function))
 $(() => {
-  $("#tweet-text").on("keyup", function(e) {
-    // console.log(e.currentTarget.textLength);
-    console.log(this.value.length);
-    // console.log(this);
-  })
-})
+  $("#tweet-text").on("keyup keydown", function() {
+    let remaining = $(this).siblings(".counter")[0];
+    let textLength = this.value.length;
+
+    remaining.innerHTML = 140 - textLength;
+    if (remaining.innerHTML < 0) {
+      $(remaining).addClass("invalid");
+    } else {
+      $(remaining).removeClass("invalid");
+    }
+  });
+});
