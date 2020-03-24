@@ -2,10 +2,10 @@
 $(() => {
   $("#tweet-text").on("keyup keydown", function() {
     let remaining = $(this).siblings(".counter")[0];
-    let textLength = this.value.length;
+    let textLength = $(this).val().length;
+    remaining.value = 140 - textLength;
 
-    remaining.innerHTML = 140 - textLength;
-    if (remaining.innerHTML < 0) {
+    if (remaining.value < 0) {
       $(remaining).addClass("invalid");
     } else {
       $(remaining).removeClass("invalid");

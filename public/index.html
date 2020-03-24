@@ -63,6 +63,7 @@
     <main class="container">
       <section class="new-tweet">
         <form method="POST" action="tweets">
+          <!-- Compose Tweet -->
           <textarea
             placeholder="What are you humming about?"
             name="text"
@@ -71,6 +72,15 @@
           <button type="submit">Tweet</button>
           <output name="counter" class="counter" for="tweet-text">140</output>
         </form>
+      </section>
+      <!-- Tweet container -->
+      <section id="tweet-list">
+        <article class="tweet">
+          <header>Matt Taylor</header>
+          <p>Hello world!</p>
+          <footer>10 days ago <span>ICONS</span></footer>
+        </article>
+        
       </section>
     </main>
   </body>
