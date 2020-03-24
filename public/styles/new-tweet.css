@@ -1,6 +1,8 @@
 form {
   border-bottom: 4px solid darkslategray;
-  font-size: 1.5em
+  font-size: 1.3em;
+  position: relative;
+  top: 20%
 }
 
 #tweet-text {
@@ -8,10 +10,21 @@ form {
   border-style: none;
   border: none;
   resize: none;
+  outline: none;
+  width: 100%;
+  margin-top: 5%;
+  margin-bottom: -3%
+  /* position: absolute; */
 }
 
 button {
   position: absolute;
   left: 0;
-  top: 32%
+  top: 120%;
+}
+
+.counter {
+  position: absolute;
+  right: 0;
+  top: 120%;
 }
