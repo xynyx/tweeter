@@ -2,7 +2,7 @@ form {
   border-bottom: 4px solid darkslategray;
   font-size: 1.3em;
   position: relative;
-  margin-top: 4%
+  margin-top: 4%;
 }
 
 #tweet-text {
@@ -12,23 +12,22 @@ form {
   resize: none;
   outline: none;
   width: 100%;
-  margin-bottom: -0.5em
+  margin-bottom: -0.5em;
 }
 
 button,
 .counter {
   position: absolute;
   top: 150%;
-  font-family: "Bungee"
+  font-family: "Bungee";
 }
-
 
 button {
   left: 0;
   background-color: royalblue;
   color: whitesmoke;
-  border: 1px solid black;
-  font-size: 1.1em
+  border: 2px solid black;
+  padding: 0.2em 0.6em;
 }
 
 .counter {
