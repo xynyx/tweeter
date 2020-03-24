@@ -1,0 +1,16 @@
+header {
+  
+}
+
+#tweet-list {
+  position: absolute;
+  top: 8.0em;
+  border: 0.3rem solid darkslategray;
+  width: 100%;
+  height: absolute;
+  padding: 3%
+}
+
+footer {
+  border-top: 0.3rem solid darkslategray;
+}
