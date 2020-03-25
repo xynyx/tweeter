@@ -1,6 +1,6 @@
 #tweet-list header {
   padding-bottom: 1.2rem;
-  font-size: 2rem;
+  font-size: 2.4rem;
 }
 
 #tweet-list {
@@ -9,19 +9,19 @@
   width: 100%;
 }
 
-#tweet-list article {
+.tweet {
   margin-bottom: 4rem;
   border: 0.3rem solid darkslategray;
   padding: 2.2rem;
 }
 
-#tweet-list p {
+.tweet p {
   font-weight: 600;
   margin-bottom: 3rem;
   margin-top: 4rem;
 }
 
-#tweet-list footer {
+.tweet footer {
   border-top: 0.3rem solid darkslategray;
   padding-top: 1rem;
   font-size: 1.4rem;
@@ -29,11 +29,11 @@
   width: 100%
 }
 
-#tweet-list footer span {
+.tweet footer span {
   margin-left: 0.3rem;
 }
 
-#tweet-list header span {
+.tweet header span {
   font-size: 2.5rem;
   padding-right: 1rem;
 }
@@ -45,7 +45,7 @@
   font-size: 1.4rem;
 }
 
-#tweet-list article:hover {
+.tweet:hover {
   box-shadow: 0.7rem 1.1rem rgba(86, 54, 172, 0.13);
   text-shadow: 1.1px 1.1px;
   transform: skewX(0.5deg) skewY(0.05deg);
@@ -57,6 +57,6 @@
   color: rgba(74, 42, 160, 0.24);
 }
 
-#tweet-list article:hover .handle {
+.tweet:hover .handle {
   display: inline;
 }
