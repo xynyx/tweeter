@@ -41,12 +41,13 @@ $(() => {
 
   const createTweetElement = function(tweet) {
     // let $tweet = $("<article>").addClass("tweet");
+    const { avatars, name, handle } = tweet.user;
     let $tweet = `
       <article class="tweet">
         <header>
-          <img src=${tweet.user.avatars}>
-          <span class="name">${tweet.user.name}</span>
-          <span class="handle">${tweet.user.handle}</span>
+          <img src=${avatars}>
+          <span class="name">${name}</span>
+          <span class="handle">${handle}</span>
         </header>
         <p>
           ${tweet.content.text}
@@ -62,6 +63,21 @@ $(() => {
       </article>`;
     return $tweet;
   };
-
+  
+  const $form = $(".new-tweet form");
+  $form.submit(function(event) {
+    event.preventDefault();
+    $.ajax({
+      url: "/tweets/",
+      type: "POST",
+      data: $(this).serialize()
+    })
+    .then(response => {
+      console.log(response)
+    })
+    .catch((err) => {
+      alert(err);
+    })
+  });
   renderTweets(data);
 });
