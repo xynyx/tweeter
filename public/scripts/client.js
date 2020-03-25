@@ -5,24 +5,42 @@
  */
 
 $(() => {
-  const renderTweets = tweets => {
-    const tweetData = [];
-    for (const post of tweets) {
-      const $tweet = createTweetElement(post);
-      tweetData.push($tweet);
+  const $form = $(".new-tweet form");
+  $form.submit(function(event) {
+    event.preventDefault();
+    if (checkTweetValidity()) {
+      $.ajax({
+        url: "/tweets/",
+        type: "POST",
+        data: $(this).serialize(),
+        success: () => {
+          // Clear form after submission
+          $form[0].reset();
+          loadTweets();
+        }
+      })
     }
-    $("#tweet-list")
-      .append(tweetData.reverse())
-      .join("");
-  };
+      // .then(function() {
+      //   checkTweetValidity(this.data);
+      //   console.log(this.data); //text =23r23r2
+      // })
+      // TODO - NECESSARY?
+      // .catch(() => {
+      //   alert("Need something to tweet! Tell us how you're really feeling.");
+      // });
+  });
 
-  // const  = thumbnailUrl => {
-  //   const blacklistedValues = ["self", undefined, null, "unknown", "default", ""];
-  
-  //   if (blacklistedValues.includes(thumbnailUrl)) return false;
-  
-  //   return true;
-  // };
+  const checkTweetValidity = () => {
+    const textLength = $("#tweet-text").val().length;
+    if (textLength > 140) {
+      alert("Exceeded maximum character limit!");
+      return false;
+    } else if (textLength === 0) {
+      alert("Need something to tweet! Tell us how you're really feeling.");
+      return false;
+    }
+    return true;
+  };
 
   const createTweetElement = tweet => {
     const { avatars, name, handle } = tweet.user;
@@ -45,33 +63,29 @@ $(() => {
           </span>
         </footer>
       </article>`;
+
     return $tweet;
   };
 
-  const $form = $(".new-tweet form");
-  $form.submit(function(event) {
-    event.preventDefault();
-    $.ajax({
-      url: "/tweets/",
-      type: "POST",
-      data: $(this).serialize()
-    })
-      .then(function() {
-        console.log(this.data);
-      })
-      .catch(err => {
-        alert(err);
-      });
-  });
+  const renderTweets = tweets => {
+    const tweetData = [];
+    for (const post of tweets) {
+      const $tweet = createTweetElement(post);
+      tweetData.push($tweet);
+    }
+    $("#tweet-list").html(tweetData.reverse().join(""))
+  };
 
-  (function loadTweets() {
+  const loadTweets = () => {
     $.ajax({
       url: "/tweets/",
       type: "GET",
-      dataType: "JSON"
-    }).then(response => {
-      renderTweets(response);
+      dataType: "JSON",
+      success: response => {
+        renderTweets(response)
+      }
     });
-  })();
+  }
 
+  loadTweets();
 });
