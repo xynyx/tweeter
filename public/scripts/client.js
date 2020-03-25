@@ -5,42 +5,26 @@
  */
 
 $(() => {
-  // Test code
-  const data = [
-    {
-      user: {
-        name: "Newton",
-        avatars: "https://i.imgur.com/73hZDYK.png",
-        handle: "@SirIsaac"
-      },
-      content: {
-        text:
-          "If I have seen further it is by standing on the shoulders of giants"
-      },
-      created_at: 1461116232227
-    },
-    {
-      user: {
-        name: "Descartes",
-        avatars: "https://i.imgur.com/nlhLi3I.png",
-        handle: "@rd"
-      },
-      content: {
-        text: "Je pense, donc je suis"
-      },
-      created_at: 1461113959088
-    }
-  ];
-
-  const renderTweets = function(tweets) {
+  const renderTweets = tweets => {
+    const tweetData = [];
     for (const post of tweets) {
       const $tweet = createTweetElement(post);
-      $("#tweet-list").append($tweet);
+      tweetData.push($tweet);
     }
+    $("#tweet-list")
+      .append(tweetData.reverse())
+      .join("");
   };
 
-  const createTweetElement = function(tweet) {
-    // let $tweet = $("<article>").addClass("tweet");
+  // const  = thumbnailUrl => {
+  //   const blacklistedValues = ["self", undefined, null, "unknown", "default", ""];
+  
+  //   if (blacklistedValues.includes(thumbnailUrl)) return false;
+  
+  //   return true;
+  // };
+
+  const createTweetElement = tweet => {
     const { avatars, name, handle } = tweet.user;
     let $tweet = `
       <article class="tweet">
@@ -63,7 +47,7 @@ $(() => {
       </article>`;
     return $tweet;
   };
-  
+
   const $form = $(".new-tweet form");
   $form.submit(function(event) {
     event.preventDefault();
@@ -72,12 +56,22 @@ $(() => {
       type: "POST",
       data: $(this).serialize()
     })
-    .then(response => {
-      console.log(response)
-    })
-    .catch((err) => {
-      alert(err);
-    })
+      .then(function() {
+        console.log(this.data);
+      })
+      .catch(err => {
+        alert(err);
+      });
   });
-  renderTweets(data);
+
+  (function loadTweets() {
+    $.ajax({
+      url: "/tweets/",
+      type: "GET",
+      dataType: "JSON"
+    }).then(response => {
+      renderTweets(response);
+    });
+  })();
+
 });
