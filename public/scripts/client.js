@@ -5,6 +5,7 @@
  */
 
 $(() => {
+  // Collect and post submit data if valid
   const $form = $(".new-tweet form");
   $form.submit(function(event) {
     event.preventDefault();
@@ -16,20 +17,14 @@ $(() => {
         success: () => {
           // Clear form after submission
           $form[0].reset();
+          // Dynamically refresh page after submission
           loadTweets();
         }
-      })
+      });
     }
-      // .then(function() {
-      //   checkTweetValidity(this.data);
-      //   console.log(this.data); //text =23r23r2
-      // })
-      // TODO - NECESSARY?
-      // .catch(() => {
-      //   alert("Need something to tweet! Tell us how you're really feeling.");
-      // });
   });
 
+  // Check if tweet is valid
   const checkTweetValidity = () => {
     const textLength = $("#tweet-text").val().length;
     if (textLength > 140) {
@@ -42,6 +37,7 @@ $(() => {
     return true;
   };
 
+  // Dynamically create HTML
   const createTweetElement = tweet => {
     const { avatars, name, handle } = tweet.user;
     let $tweet = `
@@ -67,25 +63,26 @@ $(() => {
     return $tweet;
   };
 
+  // Render dynamically created HTML, and reverse so that order is descending
   const renderTweets = tweets => {
     const tweetData = [];
     for (const post of tweets) {
       const $tweet = createTweetElement(post);
       tweetData.push($tweet);
     }
-    $("#tweet-list").html(tweetData.reverse().join(""))
+    $("#tweet-list").html(tweetData.reverse().join(""));
   };
 
+  // Load rendered tweets on page
   const loadTweets = () => {
     $.ajax({
       url: "/tweets/",
       type: "GET",
       dataType: "JSON",
       success: response => {
-        renderTweets(response)
+        renderTweets(response);
       }
     });
-  }
-
+  };
   loadTweets();
 });
