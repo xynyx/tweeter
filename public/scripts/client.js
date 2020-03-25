@@ -32,12 +32,21 @@ $(() => {
     }
   ];
 
+  const renderTweets = function(tweets) {
+    for (const post of tweets) {
+      const $tweet = createTweetElement(post);
+      $("#tweet-list").append($tweet);
+    }
+  };
+
   const createTweetElement = function(tweet) {
     // let $tweet = $("<article>").addClass("tweet");
     let $tweet = `
       <article class="tweet">
         <header>
-          <img src=${tweet.user.avatars}><span class="name">${tweet.user.name}</span><span class="handle">${tweet.user.handle}</span>
+          <img src=${tweet.user.avatars}>
+          <span class="name">${tweet.user.name}</span>
+          <span class="handle">${tweet.user.handle}</span>
         </header>
         <p>
           ${tweet.content.text}
@@ -52,13 +61,6 @@ $(() => {
         </footer>
       </article>`;
     return $tweet;
-  };
-
-  const renderTweets = function(tweets) {
-    for (const post of tweets) {
-      const $tweet = createTweetElement(post);
-      $("#tweet-list").append($tweet);
-    }
   };
 
   renderTweets(data);
