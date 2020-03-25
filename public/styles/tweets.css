@@ -1,5 +1,6 @@
-#tweet-list header {
-  padding-bottom: 1.2rem;
+.tweet header {
+  padding-bottom: 1.6rem;
+  /* margin-bottom: 1.rem */
   font-size: 2.4rem;
 }
 
@@ -17,8 +18,8 @@
 
 .tweet p {
   font-weight: 600;
-  margin-bottom: 3rem;
-  margin-top: 4rem;
+  margin-bottom: 3.7rem;
+  margin-top: 3rem;
 }
 
 .tweet footer {
@@ -26,16 +27,21 @@
   padding-top: 1rem;
   font-size: 1.4rem;
   padding-left: 0.6rem;
-  width: 100%
+  width: 100%;
 }
 
 .tweet footer span {
   margin-left: 0.3rem;
 }
 
-.tweet header span {
+.tweet header img {
   font-size: 2.5rem;
-  padding-right: 1rem;
+  padding-right: 1.2rem;
+  transform: translateY(-5px);
+}
+
+.name {
+  position: absolute;
 }
 
 #tweet-icons {
