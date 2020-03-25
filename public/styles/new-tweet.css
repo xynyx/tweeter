@@ -4,6 +4,10 @@ form {
   margin-top: 4%;
 }
 
+/* #tweet-text:invalid {
+  background: red;
+} */
+
 #tweet-text {
   background: transparent;
   border-style: none;
@@ -39,4 +43,18 @@ button {
 
 .invalid {
   color: red;
+  display: inline;
+}
+
+#maxChars, #noChars {
+  display: none;
+  border: 4px solid red;
+  padding: 0.4em;
+  font-size: 0.9em;
+  background: rgba(250, 9, 9, 0.151);
+  width: 60%;
+  margin-left: 20%;
+  position: relative;
+  text-align: center
+  /* display: none; */
 }

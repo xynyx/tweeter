@@ -24,14 +24,22 @@ $(() => {
     }
   });
 
+  // Escape user input to prevent CSS (Cross-Site Scripting)
+  const escape = function(str) {
+    // REFACTOR?
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
   // Check if tweet is valid
   const checkTweetValidity = () => {
     const textLength = $("#tweet-text").val().length;
     if (textLength > 140) {
-      alert("Exceeded maximum character limit!");
+      $("#maxChars").addClass("invalid").slideDown();
       return false;
     } else if (textLength === 0) {
-      alert("Need something to tweet! Tell us how you're really feeling.");
+      $("#noChars").addClass("invalid").slideDown();
       return false;
     }
     return true;
@@ -40,6 +48,7 @@ $(() => {
   // Dynamically create HTML
   const createTweetElement = tweet => {
     const { avatars, name, handle } = tweet.user;
+    const text = tweet.content.text;
     let $tweet = `
       <article class="tweet">
         <header>
@@ -48,7 +57,7 @@ $(() => {
           <span class="handle">${handle}</span>
         </header>
         <p>
-          ${tweet.content.text}
+          ${escape(text)}
         </p>
         <footer>
           ${tweet.created_at}
