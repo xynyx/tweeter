@@ -8,6 +8,11 @@ nav {
   color: whitesmoke;
 }
 
+#compose > div {
+  text-align: center;
+  padding: 0.2em
+}
+
 #logo {
   font-family: "Bungee";
   font-size: 2.0em;
@@ -15,10 +20,11 @@ nav {
 }
 
 #compose {
+  transform: translateY(-5px);
   font-family: "Source Sans Pro";
   font-weight: 400;
-  font-size: 1.5em;
+  font-size: 1.3em;
   float: right;
-  margin-top: 0.1em
+  margin-bottom: 1em
   
 }

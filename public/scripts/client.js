@@ -35,13 +35,18 @@ $(() => {
   // Check if tweet is valid
   const checkTweetValidity = () => {
     const textLength = $("#tweet-text").val().length;
+    $("#noChars, #maxChars").removeClass("invalid").slideUp(300)
     if (textLength > 140) {
-      $("#maxChars").addClass("invalid").slideDown();
+      $("#maxChars")
+        .addClass("invalid")
+        .slideDown(500);
       return false;
     } else if (textLength === 0) {
-      $("#noChars").addClass("invalid").slideDown();
+      $("#noChars")
+        .addClass("invalid")
+        .slideDown(500);
       return false;
-    }
+    };
     return true;
   };
 
@@ -72,7 +77,7 @@ $(() => {
     return $tweet;
   };
 
-  // Render dynamically created HTML, and reverse so that order is descending
+  // Render dynamically created HTML, and reverse so that order is descending by time created
   const renderTweets = tweets => {
     const tweetData = [];
     for (const post of tweets) {
