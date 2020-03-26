@@ -1,4 +1,4 @@
-form {
+#compose-field form {
   border-bottom: 0.3rem solid darkslategray;
   position: relative;
   margin-top: 4%;
@@ -20,7 +20,7 @@ form {
 }
 
 #compose-field > form > button,
-.counter {
+#counter {
   position: absolute;
   top: 150%;
   font-family: "Bungee";
@@ -34,7 +34,7 @@ form {
   padding: 0.2em 0.6em;
 }
 
-.counter {
+#counter {
   right: 0;
   font-size: 1.1em;
 }

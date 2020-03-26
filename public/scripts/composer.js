@@ -3,7 +3,7 @@ $(() => {
   //TODO - MAKE IIFE OR LEAVE?
   // Check if tweet length is greater than 140 chars
   $("#tweet-text").on("keyup keydown", function() {
-    let remaining = $(this).siblings(".counter")[0];
+    let remaining = $(this).siblings("#counter")[0];
     let textLength = $(this).val().length;
     remaining.value = 140 - textLength;
 

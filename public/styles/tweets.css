@@ -4,7 +4,10 @@
 }
 
 #tweet-list {
-  position: absolute;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
   margin-top: 2em;
   width: 100%;
 }
@@ -13,6 +16,7 @@
   margin-bottom: 4rem;
   border: 0.3rem solid darkslategray;
   padding: 2.2rem;
+  width: 100%;
 }
 
 .tweet p {

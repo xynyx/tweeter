@@ -1,18 +1,23 @@
 body > header:first-of-type {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
   background-image: url("../images/header-background.png");
   background-color: rgb(172, 71, 5);
-  height: 550px;
+  height: 30rem;
   width: 100%;
 }
 
 .avatar {
-  position: relative;
   text-align: center;
-  top: 33%;
+  margin: auto;
+  margin-bottom: 0;
+  width: 100%;
 }
 
 .avatar-name {
-  top: 23%;
   color: whitesmoke;
   font-family: "Bungee";
+  margin-top: 0;
 }
