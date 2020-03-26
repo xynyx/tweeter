@@ -44,7 +44,7 @@ $(() => {
     });
 
     $(window).scroll(function() {
-      if ($(this).scrollTop() < 400) {
+      if ($(this).scrollTop() < 300) {
         $("#to-compose").hide();
       } else {
         $("#to-compose").show();

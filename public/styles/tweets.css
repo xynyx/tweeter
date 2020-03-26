@@ -1,6 +1,6 @@
 .tweet header {
-  padding-bottom: 1.6rem;
-  font-size: 2.4rem;
+  padding-bottom: 1rem;
+  font-size: 2rem;
 }
 
 #tweet-list {
@@ -47,6 +47,7 @@
 
 .name {
   position: absolute;
+  padding-top: 0.3rem;
 }
 
 #tweet-icons {
@@ -71,3 +72,5 @@
 .tweet:hover .handle {
   display: inline;
 }
+
+

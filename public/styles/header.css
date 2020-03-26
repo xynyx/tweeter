@@ -21,3 +21,16 @@ body > header:first-of-type {
   font-family: "Bungee";
   margin-top: 0;
 }
+
+  
+  @media only screen and (min-width: 1024px) {
+
+  
+    body > header:first-of-type {
+      width: 35%;
+      margin-left: auto;
+      margin-top: 10rem;
+    }
+  
+    
+  }

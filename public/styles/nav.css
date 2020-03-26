@@ -1,13 +1,12 @@
 nav {
   display: -webkit-flex;
   display: flex;
-  -webkit-flex-flow: row wrap;
-  flex-flow: row wrap;
   height: 9rem;
   z-index: 1;
   background-color: #4056a1;
   padding: 1.5em;
   color: whitesmoke;
+  width: 100%;
 }
 
 #compose > div {
@@ -41,36 +40,3 @@ nav {
   border: none;
   outline: none;
 }
-
-@media only screen and (min-width: 1024px) {
-}
-
-/* .container {
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-flow: row wrap;
-  flex-flow: row wrap;
-}
-
-.c1, .c2, .c3, .c4 {
-  width: 100%;
-}
-
-@media (min-width: 600px) {
-  .c1 {
-    width: 25%;
-  }
-
-  .c4 {
-    width: 75%;
-  }
-
-}
-
-@media (min-width: 800px) {
-  .container {
-    width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-} */
