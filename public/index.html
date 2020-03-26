@@ -26,6 +26,9 @@
     <!-- Header CSS -->
     <link rel="stylesheet" href="./styles/header.css" type="text/css" />
 
+    <!-- Footer CSS -->
+    <link rel="stylesheet" href="./styles/footer.css" type="text/css" />
+
     <!-- Compose CSS -->
     <link rel="stylesheet" href="./styles/new-tweet.css" type="text/css" />
 
@@ -39,10 +42,7 @@
     <script type="text/javascript" src="./scripts/client.js"></script>
 
     <!-- Character counter JS -->
-    <script
-      type="text/javascript"
-      src="./scripts/composer.js"
-    ></script>
+    <script type="text/javascript" src="./scripts/composer.js"></script>
   </head>
 
   <body>
@@ -68,9 +68,13 @@
     <!-- Page-specific (main) content here -->
     <main>
       <section id="compose-field" class="invisible">
-        <p id="maxChars">&#128293;&#10071; Hey! Space is NOT unlimited! &#10071;&#128293;
+        <p id="maxChars">
+          &#128293;&#10071; Hey! Space is NOT unlimited! &#10071;&#128293;
         </p>
-        <p id="noChars">&#128293;&#10071; You have something more interesting to say... right? &#10071;&#128293;</p>
+        <p id="noChars">
+          &#128293;&#10071; You have something more interesting to say... right?
+          &#10071;&#128293;
+        </p>
         <form method="POST" action="/tweets/">
           <!-- Compose Tweet -->
           <textarea
@@ -86,11 +90,10 @@
       <section id="tweet-list">
         <!-- Individual tweets will be injected here via JS -->
       </section>
-    </main>
-    <footer>
-      <button type="button">
 
+      <button type="button" id="to-compose">
+        &#128035;
       </button>
-    </footer>
+    </main>
   </body>
 </html>

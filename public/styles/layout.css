@@ -37,3 +37,23 @@ body {
    margin: auto
  }
 
+
+#to-compose {
+  display: none;
+  position: fixed;
+  bottom: 2vh;
+  right: 1.4vw;
+  border-radius: 50%;
+  background-color: rgba(255, 60, 0, 0.815);
+  padding: 25px;
+  border: none;
+  font-size: 1.3em;
+  outline: none;
+}
+
+#to-compose:hover {
+  box-shadow: 0.3rem 0.5rem rgba(35, 14, 94, 0.13);
+  text-shadow: 1.5px 1.7px;
+  font-size: 1.4em;
+}
+
