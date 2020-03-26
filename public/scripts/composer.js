@@ -1,9 +1,8 @@
-// Ensure DOM has loaded first (shortform for $(document).ready(function))
 $(() => {
   //TODO - MAKE IIFE OR LEAVE?
   // Check if tweet length is greater than 140 chars; turn counter red by adding class
   $("#tweet-text").on("keyup keydown", function() {
-    let remaining = $(this).siblings(".counter")[0];
+    let remaining = $(this).siblings("#counter")[0];
     let textLength = $(this).val().length;
     remaining.value = 140 - textLength;
 
@@ -44,7 +43,7 @@ $(() => {
     });
 
     $(window).scroll(function() {
-      if ($(this).scrollTop() < 400) {
+      if ($(this).scrollTop() < 300) {
         $("#to-compose").hide();
       } else {
         $("#to-compose").show();

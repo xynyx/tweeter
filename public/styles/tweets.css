@@ -1,10 +1,13 @@
 .tweet header {
-  padding-bottom: 1.6rem;
-  font-size: 2.4rem;
+  padding-bottom: 1rem;
+  font-size: 2rem;
 }
 
 #tweet-list {
-  position: absolute;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
   margin-top: 2em;
   width: 100%;
 }
@@ -13,6 +16,7 @@
   margin-bottom: 4rem;
   border: 0.3rem solid darkslategray;
   padding: 2.2rem;
+  width: 100%;
 }
 
 .tweet p {
@@ -20,7 +24,6 @@
   margin-bottom: 3.7rem;
   margin-top: 3rem;
   overflow-wrap: break-word;
-  text-align: center;
 }
 
 .tweet footer {
@@ -43,6 +46,7 @@
 
 .name {
   position: absolute;
+  padding-top: 0.3rem;
 }
 
 #tweet-icons {

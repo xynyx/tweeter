@@ -1,11 +1,12 @@
 nav {
-  position: fixed;
-  height: 150px;
-  width: 100vw;
+  display: -webkit-flex;
+  display: flex;
+  height: 9rem;
   z-index: 1;
   background-color: #4056a1;
   padding: 1.5em;
   color: whitesmoke;
+  width: 100%;
 }
 
 #compose > div {
@@ -20,16 +21,15 @@ nav {
 #logo {
   font-family: "Bungee";
   font-size: 2em;
-  float: left;
 }
 
 #compose:hover div {
-  transform: translateY(12px)
+  transform: translateY(12px);
 }
 
 #compose {
-  position: relative;
   font-family: "Source Sans Pro";
+  margin-left: auto;
   font-weight: 400;
   font-size: 1.3em;
   color: whitesmoke;
@@ -39,4 +39,11 @@ nav {
   background-color: #4056a1;
   border: none;
   outline: none;
+}
+
+@media only screen and (max-width: 1023px) {
+  nav, #compose {
+    background-image: url("../images/header-background.png");
+    background-color: rgb(172, 71, 5);
+  }
 }
