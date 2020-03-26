@@ -1,4 +1,3 @@
-// Ensure DOM has loaded first (shortform for $(document).ready(function))
 $(() => {
   //TODO - MAKE IIFE OR LEAVE?
   // Check if tweet length is greater than 140 chars
