@@ -49,7 +49,10 @@
     <!-- Top nav bar (fixed) -->
     <nav>
       <span id="logo">tweeter</span>
-      <a id="compose"><strong>Write</strong> a new tweet<div>&#128037;</div></a>
+      <button type="button" id="compose">
+        <strong>Write</strong> a new tweet
+        <div class="bounce">&#128037;</div>
+      </button>
     </nav>
 
     <header>
@@ -64,10 +67,14 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-      <section class="new-tweet">
-        <p id="maxChars">&#128293;&#10071; Hey! Space is NOT unlimited! &#10071;&#128293;
+      <section id="new-tweet">
+        <p id="maxChars">
+          &#128293;&#10071; Hey! Space is NOT unlimited! &#10071;&#128293;
         </p>
-        <p id="noChars">&#128293;&#10071; You have something more interesting to say... right? &#10071;&#128293;</p>
+        <p id="noChars">
+          &#128293;&#10071; You have something more interesting to say... right?
+          &#10071;&#128293;
+        </p>
         <form method="POST" action="/tweets/">
           <!-- Compose Tweet -->
           <textarea

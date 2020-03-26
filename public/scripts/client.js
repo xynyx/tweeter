@@ -6,7 +6,7 @@
 
 $(() => {
   // Collect and post submit data if valid
-  const $form = $(".new-tweet form");
+  const $form = $("#new-tweet form");
   $form.submit(function(event) {
     event.preventDefault();
     if (checkTweetValidity()) {

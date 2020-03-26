@@ -10,21 +10,28 @@ nav {
 
 #compose > div {
   text-align: center;
-  padding: 0.2em
+  padding: 0.2em;
+}
+
+#compose:hover > div {
+  transform: translateY(10px);
 }
 
 #logo {
   font-family: "Bungee";
-  font-size: 2.0em;
+  font-size: 2em;
   float: left;
 }
 
 #compose {
-  transform: translateY(-5px);
+  position: relative;
   font-family: "Source Sans Pro";
   font-weight: 400;
   font-size: 1.3em;
   float: right;
-  margin-bottom: 1em
-  
+  transform: translateY(-120px);
+  margin-bottom: 1em;
+  background-color: #4056a1;
+  border: none;
+  outline: none;
 }
