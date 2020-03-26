@@ -19,6 +19,8 @@
   font-weight: 600;
   margin-bottom: 3.7rem;
   margin-top: 3rem;
+  overflow-wrap: break-word;
+  text-align: center;
 }
 
 .tweet footer {

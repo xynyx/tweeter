@@ -12,7 +12,7 @@ $(() => {
     if (checkTweetValidity()) {
       $.ajax({
         url: "/tweets/",
-        type: "POST",
+        method: "POST",
         data: $(this).serialize(),
         success: () => {
           // Clear form after submission
@@ -35,7 +35,9 @@ $(() => {
   // Check if tweet is valid
   const checkTweetValidity = () => {
     const textLength = $("#tweet-text").val().length;
-    $("#noChars, #maxChars").removeClass("invalid").slideUp(300)
+    $("#noChars, #maxChars")
+      .removeClass("invalid")
+      .slideUp(300);
     if (textLength > 140) {
       $("#maxChars")
         .addClass("invalid")
@@ -46,7 +48,7 @@ $(() => {
         .addClass("invalid")
         .slideDown(500);
       return false;
-    };
+    }
     return true;
   };
 
@@ -91,7 +93,7 @@ $(() => {
   const loadTweets = () => {
     $.ajax({
       url: "/tweets/",
-      type: "GET",
+      method: "GET",
       dataType: "JSON",
       success: response => {
         renderTweets(response);
@@ -99,4 +101,14 @@ $(() => {
     });
   };
   loadTweets();
+
+  $("#hide").click(function() {
+    var hidden = $(".hidden");
+    hidden.hide("slide", { direction: "left" }, 400);
+  });
+
+  $("#show").click(function() {
+    var hidden = $(".hidden");
+    hidden.show("slide", { direction: "left" }, 400);
+  });
 });

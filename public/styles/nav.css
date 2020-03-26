@@ -19,12 +19,19 @@ nav {
   float: left;
 }
 
+#compose:hover div {
+  transform: translateY(12px)
+}
+
 #compose {
-  transform: translateY(-5px);
+  position: relative;
   font-family: "Source Sans Pro";
   font-weight: 400;
   font-size: 1.3em;
   float: right;
-  margin-bottom: 1em
-  
+  transform: translateY(-12px);
+  margin-bottom: 1em;
+  background-color: #4056a1;
+  border: none;
+  outline: none;
 }
