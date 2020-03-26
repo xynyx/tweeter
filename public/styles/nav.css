@@ -28,8 +28,9 @@ nav {
   font-family: "Source Sans Pro";
   font-weight: 400;
   font-size: 1.3em;
+  color: whitesmoke;
   float: right;
-  transform: translateY(-12px);
+  transform: translateY(-15px);
   margin-bottom: 1em;
   background-color: #4056a1;
   border: none;

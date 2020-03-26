@@ -4,12 +4,10 @@ form {
   margin-top: 4%;
 }
 
-.hide-compose {
+#compose-field {
+  transform: translateY(15px);
+  padding-bottom: 4.0em;
   display: none;
-}
-
-.show-compose {
-  display:inline;
 }
 
 #tweet-text {
@@ -21,14 +19,14 @@ form {
   width: 100%;
 }
 
-button,
+#compose-field > form > button,
 .counter {
   position: absolute;
   top: 150%;
   font-family: "Bungee";
 }
 
-button {
+#compose-field > form > button {
   left: 0;
   background-color: royalblue;
   color: whitesmoke;

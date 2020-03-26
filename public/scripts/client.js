@@ -101,14 +101,5 @@ $(() => {
     });
   };
   loadTweets();
-
-  $("#hide").click(function() {
-    var hidden = $(".hidden");
-    hidden.hide("slide", { direction: "left" }, 400);
-  });
-
-  $("#show").click(function() {
-    var hidden = $(".hidden");
-    hidden.show("slide", { direction: "left" }, 400);
-  });
 });
+s
