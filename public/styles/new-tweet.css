@@ -4,13 +4,11 @@
   margin-top: 4%;
 }
 
-#new-tweet {
-  position: relative;
+#compose-field {
+  transform: translateY(15px);
+  padding-bottom: 4.0em;
+  display: none;
 }
-
-/* #tweet-text:invalid {
-  background: red;
-} */
 
 #tweet-text {
   background: transparent;
@@ -21,14 +19,14 @@
   width: 100%;
 }
 
-button,
+#compose-field > form > button,
 .counter {
   position: absolute;
   top: 150%;
   font-family: "Bungee";
 }
 
-button {
+#compose-field > form > button {
   left: 0;
   background-color: royalblue;
   color: whitesmoke;
@@ -50,7 +48,8 @@ button {
   display: inline;
 }
 
-#maxChars, #noChars {
+#maxChars,
+#noChars {
   display: none;
   border: 4px outset red;
   padding: 0.4em;
@@ -59,6 +58,5 @@ button {
   width: 70%;
   margin-left: 14.5%;
   position: relative;
-  text-align: center
-  /* display: none; */
+  text-align: center;
 }

@@ -23,13 +23,18 @@ nav {
   float: left;
 }
 
+#compose:hover div {
+  transform: translateY(12px)
+}
+
 #compose {
   position: relative;
   font-family: "Source Sans Pro";
   font-weight: 400;
   font-size: 1.3em;
+  color: whitesmoke;
   float: right;
-  transform: translateY(-120px);
+  transform: translateY(-15px);
   margin-bottom: 1em;
   background-color: #4056a1;
   border: none;
