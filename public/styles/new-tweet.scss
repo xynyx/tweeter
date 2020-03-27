@@ -1,0 +1,57 @@
+@use 'base';
+
+#compose-field {
+  transform: translateY(15px);
+  padding-bottom: 4em;
+  display: none;
+  form {
+    position: relative;
+    margin-top: 4%;
+    button,
+    #counter {
+      position: absolute;
+      top: 150%;
+    }
+    button {
+      left: 0;
+      border: 2px solid black;
+      padding: 0.2em 0.6em;
+    }
+  }
+}
+
+#tweet-text {
+  background: transparent;
+  border-style: none;
+  border: none;
+  resize: none;
+  outline: none;
+  width: 100%;
+}
+
+#counter {
+  right: 0;
+  font-size: 1.1em;
+}
+
+::placeholder {
+  font-style: italic;
+}
+
+.invalid {
+  color: red;
+  display: inline;
+}
+
+#maxChars,
+#noChars {
+  display: none;
+  border: 4px outset red;
+  padding: 0.4em;
+  font-size: 0.9em;
+  background: rgba(250, 9, 9, 0.151);
+  width: 70%;
+  margin-left: 14.5%;
+  position: relative;
+  text-align: center;
+}

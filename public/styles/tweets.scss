@@ -1,0 +1,60 @@
+@use 'base';
+
+#tweet-list {
+  margin-top: 2em;
+  width: 100%;
+}
+
+#tweet-icons {
+  float: right;
+  padding-left: 0.5rem;
+  margin-right: 0.6rem;
+  font-size: 1.4rem;
+}
+
+.tweet {
+  margin-bottom: 4rem;
+  padding: 2.2rem;
+  width: 100%;
+  &:hover {
+    text-shadow: 1.1px 1.1px;
+    transform: skewX(0.5deg) skewY(0.05deg);
+    .handle {
+      display: inline;
+    }
+  }
+  header {
+    padding-bottom: 1rem;
+    font-size: 2rem;
+    img {
+      font-size: 2.5rem;
+      padding-right: 1.2rem;
+      transform: translateY(-5px);
+    }
+  }
+  p {
+    font-weight: 600;
+    margin-bottom: 3.7rem;
+    margin-top: 3rem;
+    overflow-wrap: break-word;
+  }
+  footer {
+    padding-top: 1rem;
+    font-size: 1.4rem;
+    padding-left: 0.6rem;
+    width: 100%;
+    span {
+      margin-left: 0.3rem;
+    }
+  }
+}
+
+.name {
+  position: absolute;
+  padding-top: 0.3rem;
+}
+
+.handle {
+  display: none;
+  float: right;
+}

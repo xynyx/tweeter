@@ -36,18 +36,18 @@ $(() => {
   })();
 
   // Fixed button that brings user to top of page & opens compose tweet
-  (function bringToComposeButton() {
-    $("#to-compose").on("click", function() {
-      $(window).scrollTop(0);
-      showCompose();
-    });
+    (function bringToComposeButton() {
+      $("#to-compose").on("click", function() {
+        $(window).scrollTop(0);
+        showCompose();
+      });
 
-    $(window).scroll(function() {
-      if ($(this).scrollTop() < 300) {
-        $("#to-compose").hide();
-      } else {
-        $("#to-compose").show();
-      }
-    });
-  })();
+      $(window).scroll(function() {
+        if ($(this).scrollTop() < 300) {
+          $("#to-compose").hide();
+        } else {
+          $("#to-compose").show();
+        }
+      });
+    })();
 });

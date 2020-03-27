@@ -1,3 +1,69 @@
+nav {
+  background-color: #4056a1;
+  color: #fffcf2;
+}
+nav span {
+  font-family: "Bungee";
+}
+
+#compose {
+  font-family: "Source Sans Pro", sans-serif;
+  color: #fffcf2;
+  background-color: #4056a1;
+}
+
+#to-compose {
+  background-color: #b44200;
+}
+#to-compose:hover {
+  box-shadow: 0.3rem 0.5rem #2f5050;
+}
+
+#compose-field form {
+  border-bottom: 0.3rem solid #2f5050;
+}
+#compose-field form button,
+#compose-field form #counter {
+  font-family: "Bungee";
+}
+#compose-field form button {
+  background-color: #4056a1;
+  color: #fffcf2;
+}
+
+.tweet:hover {
+  box-shadow: 0.7rem 1.1rem rgba(86, 54, 172, 0.13);
+}
+
+.handle {
+  color: rgba(86, 54, 172, 0.13);
+}
+
+.tweet {
+  border: 0.3rem solid #2f5050;
+}
+.tweet footer {
+  border-top: 0.3rem solid #2f5050;
+}
+
+body,
+main {
+  background-color: #fffcf2;
+}
+
+body {
+  color: #545149;
+  font-family: "Source Sans Pro", sans-serif;
+}
+body > header:first-of-type {
+  background-color: #b44200;
+}
+
+.avatar-name {
+  color: #fffcf2;
+  font-family: "Bungee";
+}
+
 /*
  * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
  * https://css-tricks.com/international-box-sizing-awareness-day/
@@ -6,6 +72,7 @@
 html {
   box-sizing: border-box;
 }
+
 *,
 *:before,
 *:after {
@@ -15,27 +82,13 @@ html {
 /*
  * Global layout stuff
  */
-
-body,
-main {
-  background-color: #fcf5ed;
-}
-
 body {
-  color: #545149;
   font-size: 1.7rem;
-  font-family: "Source Sans Pro", sans-serif;
 }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
-
-/* main, body > header:first-of-type {
-  display: -webkit-flex;
-  display: flex;
- } */
-
 main {
   position: relative;
   width: 90%;
@@ -48,15 +101,12 @@ main {
   bottom: 2vh;
   right: 1.4vw;
   border-radius: 50%;
-  background-color: rgba(255, 60, 0, 0.815);
   padding: 25px;
   border: none;
   font-size: 1.3em;
   outline: none;
 }
-
 #to-compose:hover {
-  box-shadow: 0.3rem 0.5rem rgba(35, 14, 94, 0.13);
   text-shadow: 1.5px 1.7px;
   font-size: 1.4em;
 }
@@ -69,7 +119,10 @@ main {
     flex-flow: row wrap;
     justify-content: space-evenly;
   }
+
   main {
     width: 55%;
   }
 }
+
+/*# sourceMappingURL=layout.css.map */

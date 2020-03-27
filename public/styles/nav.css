@@ -1,49 +1,97 @@
 nav {
+  background-color: #4056a1;
+  color: #fffcf2;
+}
+nav span {
+  font-family: "Bungee";
+}
+
+#compose {
+  font-family: "Source Sans Pro", sans-serif;
+  color: #fffcf2;
+  background-color: #4056a1;
+}
+
+#to-compose {
+  background-color: #b44200;
+}
+#to-compose:hover {
+  box-shadow: 0.3rem 0.5rem #2f5050;
+}
+
+#compose-field form {
+  border-bottom: 0.3rem solid #2f5050;
+}
+#compose-field form button,
+#compose-field form #counter {
+  font-family: "Bungee";
+}
+#compose-field form button {
+  background-color: #4056a1;
+  color: #fffcf2;
+}
+
+.tweet:hover {
+  box-shadow: 0.7rem 1.1rem rgba(86, 54, 172, 0.13);
+}
+
+.handle {
+  color: rgba(86, 54, 172, 0.13);
+}
+
+.tweet {
+  border: 0.3rem solid #2f5050;
+}
+.tweet footer {
+  border-top: 0.3rem solid #2f5050;
+}
+
+body,
+main {
+  background-color: #fffcf2;
+}
+
+body {
+  color: #545149;
+  font-family: "Source Sans Pro", sans-serif;
+}
+body > header:first-of-type {
+  background-color: #b44200;
+}
+
+.avatar-name {
+  color: #fffcf2;
+  font-family: "Bungee";
+}
+
+nav {
   display: -webkit-flex;
   display: flex;
   height: 9rem;
   z-index: 1;
-  background-color: #4056a1;
   padding: 1.5em;
-  color: whitesmoke;
   width: 100%;
 }
+nav span {
+  font-size: 2em;
+}
 
-#compose > div {
+#compose {
+  margin-left: auto;
+  font-weight: 400;
+  font-size: 1.3em;
+  float: right;
+  transform: translateY(-15px);
+  margin-bottom: 1em;
+  border: none;
+  outline: none;
+}
+#compose div {
   text-align: center;
   padding: 0.2em;
 }
-
 #compose:hover > div {
   transform: translateY(10px);
 }
 
-#logo {
-  font-family: "Bungee";
-  font-size: 2em;
-}
-
-#compose:hover div {
-  transform: translateY(12px);
-}
-
-#compose {
-  font-family: "Source Sans Pro";
-  margin-left: auto;
-  font-weight: 400;
-  font-size: 1.3em;
-  color: whitesmoke;
-  float: right;
-  transform: translateY(-15px);
-  margin-bottom: 1em;
-  background-color: #4056a1;
-  border: none;
-  outline: none;
-}
-
-@media only screen and (max-width: 1023px) {
-  nav, #compose {
-    background-image: url("../images/header-background.png");
-    background-color: rgb(172, 71, 5);
-  }
-}
+/*# sourceMappingURL=nav.css.map */

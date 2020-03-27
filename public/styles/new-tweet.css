@@ -1,13 +1,87 @@
+nav {
+  background-color: #4056a1;
+  color: #fffcf2;
+}
+nav span {
+  font-family: "Bungee";
+}
+
+#compose {
+  font-family: "Source Sans Pro", sans-serif;
+  color: #fffcf2;
+  background-color: #4056a1;
+}
+
+#to-compose {
+  background-color: #b44200;
+}
+#to-compose:hover {
+  box-shadow: 0.3rem 0.5rem #2f5050;
+}
+
 #compose-field form {
-  border-bottom: 0.3rem solid darkslategray;
-  position: relative;
-  margin-top: 4%;
+  border-bottom: 0.3rem solid #2f5050;
+}
+#compose-field form button,
+#compose-field form #counter {
+  font-family: "Bungee";
+}
+#compose-field form button {
+  background-color: #4056a1;
+  color: #fffcf2;
+}
+
+.tweet:hover {
+  box-shadow: 0.7rem 1.1rem rgba(86, 54, 172, 0.13);
+}
+
+.handle {
+  color: rgba(86, 54, 172, 0.13);
+}
+
+.tweet {
+  border: 0.3rem solid #2f5050;
+}
+.tweet footer {
+  border-top: 0.3rem solid #2f5050;
+}
+
+body,
+main {
+  background-color: #fffcf2;
+}
+
+body {
+  color: #545149;
+  font-family: "Source Sans Pro", sans-serif;
+}
+body > header:first-of-type {
+  background-color: #b44200;
+}
+
+.avatar-name {
+  color: #fffcf2;
+  font-family: "Bungee";
 }
 
 #compose-field {
   transform: translateY(15px);
-  padding-bottom: 4.0em;
+  padding-bottom: 4em;
   display: none;
+}
+#compose-field form {
+  position: relative;
+  margin-top: 4%;
+}
+#compose-field form button,
+#compose-field form #counter {
+  position: absolute;
+  top: 150%;
+}
+#compose-field form button {
+  left: 0;
+  border: 2px solid black;
+  padding: 0.2em 0.6em;
 }
 
 #tweet-text {
@@ -17,21 +91,6 @@
   resize: none;
   outline: none;
   width: 100%;
-}
-
-#compose-field > form > button,
-#counter {
-  position: absolute;
-  top: 150%;
-  font-family: "Bungee";
-}
-
-#compose-field > form > button {
-  left: 0;
-  background-color: royalblue;
-  color: whitesmoke;
-  border: 2px solid black;
-  padding: 0.2em 0.6em;
 }
 
 #counter {
@@ -60,3 +119,5 @@
   position: relative;
   text-align: center;
 }
+
+/*# sourceMappingURL=new-tweet.css.map */

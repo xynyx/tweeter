@@ -1,0 +1,61 @@
+@use 'base';
+/*
+ * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ * https://css-tricks.com/international-box-sizing-awareness-day/
+ * Do not modify these two selectors, please
+ */
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/*
+ * Global layout stuff
+ */
+
+body {
+  font-size: 1.7rem;
+}
+
+/*
+ * Additional CSS can be defined below or in other CSS files, as per instructions
+ */
+
+main {
+  position: relative;
+  width: 90%;
+  margin: auto;
+}
+
+#to-compose {
+  display: none;
+  position: fixed;
+  bottom: 2vh;
+  right: 1.4vw;
+  border-radius: 50%;
+  padding: 25px;
+  border: none;
+  font-size: 1.3em;
+  outline: none;
+  &:hover {
+    text-shadow: 1.5px 1.7px;
+    font-size: 1.4em;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  body {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+  }
+  main {
+    width: 55%;
+  }
+}

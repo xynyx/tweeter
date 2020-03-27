@@ -1,52 +1,72 @@
-.tweet header {
-  padding-bottom: 1rem;
-  font-size: 2rem;
+nav {
+  background-color: #4056a1;
+  color: #fffcf2;
+}
+nav span {
+  font-family: "Bungee";
 }
 
-#tweet-list {
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-flow: row wrap;
-  flex-flow: row wrap;
-  margin-top: 2em;
-  width: 100%;
+#compose {
+  font-family: "Source Sans Pro", sans-serif;
+  color: #fffcf2;
+  background-color: #4056a1;
+}
+
+#to-compose {
+  background-color: #b44200;
+}
+#to-compose:hover {
+  box-shadow: 0.3rem 0.5rem #2f5050;
+}
+
+#compose-field form {
+  border-bottom: 0.3rem solid #2f5050;
+}
+#compose-field form button,
+#compose-field form #counter {
+  font-family: "Bungee";
+}
+#compose-field form button {
+  background-color: #4056a1;
+  color: #fffcf2;
+}
+
+.tweet:hover {
+  box-shadow: 0.7rem 1.1rem rgba(86, 54, 172, 0.13);
+}
+
+.handle {
+  color: rgba(86, 54, 172, 0.13);
 }
 
 .tweet {
-  margin-bottom: 4rem;
-  border: 0.3rem solid darkslategray;
-  padding: 2.2rem;
-  width: 100%;
+  border: 0.3rem solid #2f5050;
 }
-
-.tweet p {
-  font-weight: 600;
-  margin-bottom: 3.7rem;
-  margin-top: 3rem;
-  overflow-wrap: break-word;
-}
-
 .tweet footer {
-  border-top: 0.3rem solid darkslategray;
-  padding-top: 1rem;
-  font-size: 1.4rem;
-  padding-left: 0.6rem;
+  border-top: 0.3rem solid #2f5050;
+}
+
+body,
+main {
+  background-color: #fffcf2;
+}
+
+body {
+  color: #545149;
+  font-family: "Source Sans Pro", sans-serif;
+}
+body > header:first-of-type {
+  background-color: #b44200;
+}
+
+.avatar-name {
+  color: #fffcf2;
+  font-family: "Bungee";
+}
+
+#tweet-list {
+  margin-top: 2em;
   width: 100%;
-}
-
-.tweet footer span {
-  margin-left: 0.3rem;
-}
-
-.tweet header img {
-  font-size: 2.5rem;
-  padding-right: 1.2rem;
-  transform: translateY(-5px);
-}
-
-.name {
-  position: absolute;
-  padding-top: 0.3rem;
 }
 
 #tweet-icons {
@@ -56,18 +76,51 @@
   font-size: 1.4rem;
 }
 
+.tweet {
+  margin-bottom: 4rem;
+  padding: 2.2rem;
+  width: 100%;
+}
 .tweet:hover {
-  box-shadow: 0.7rem 1.1rem rgba(86, 54, 172, 0.13);
   text-shadow: 1.1px 1.1px;
   transform: skewX(0.5deg) skewY(0.05deg);
+}
+.tweet:hover .handle {
+  display: inline;
+}
+.tweet header {
+  padding-bottom: 1rem;
+  font-size: 2rem;
+}
+.tweet header img {
+  font-size: 2.5rem;
+  padding-right: 1.2rem;
+  transform: translateY(-5px);
+}
+.tweet p {
+  font-weight: 600;
+  margin-bottom: 3.7rem;
+  margin-top: 3rem;
+  overflow-wrap: break-word;
+}
+.tweet footer {
+  padding-top: 1rem;
+  font-size: 1.4rem;
+  padding-left: 0.6rem;
+  width: 100%;
+}
+.tweet footer span {
+  margin-left: 0.3rem;
+}
+
+.name {
+  position: absolute;
+  padding-top: 0.3rem;
 }
 
 .handle {
   display: none;
   float: right;
-  color: rgba(74, 42, 160, 0.24);
 }
 
-.tweet:hover .handle {
-  display: inline;
-}
+/*# sourceMappingURL=tweets.css.map */

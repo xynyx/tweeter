@@ -1,36 +1,92 @@
+nav {
+  background-color: #4056a1;
+  color: #fffcf2;
+}
+nav span {
+  font-family: "Bungee";
+}
+
+#compose {
+  font-family: "Source Sans Pro", sans-serif;
+  color: #fffcf2;
+  background-color: #4056a1;
+}
+
+#to-compose {
+  background-color: #b44200;
+}
+#to-compose:hover {
+  box-shadow: 0.3rem 0.5rem #2f5050;
+}
+
+#compose-field form {
+  border-bottom: 0.3rem solid #2f5050;
+}
+#compose-field form button,
+#compose-field form #counter {
+  font-family: "Bungee";
+}
+#compose-field form button {
+  background-color: #4056a1;
+  color: #fffcf2;
+}
+
+.tweet:hover {
+  box-shadow: 0.7rem 1.1rem rgba(86, 54, 172, 0.13);
+}
+
+.handle {
+  color: rgba(86, 54, 172, 0.13);
+}
+
+.tweet {
+  border: 0.3rem solid #2f5050;
+}
+.tweet footer {
+  border-top: 0.3rem solid #2f5050;
+}
+
+body,
+main {
+  background-color: #fffcf2;
+}
+
+body {
+  color: #545149;
+  font-family: "Source Sans Pro", sans-serif;
+}
 body > header:first-of-type {
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-flow: row wrap;
-  flex-flow: row wrap;
+  background-color: #b44200;
+}
+
+.avatar-name {
+  color: #fffcf2;
+  font-family: "Bungee";
+}
+
+body > header:first-of-type {
   background-image: url("../images/header-background.png");
-  background-color: rgb(172, 71, 5);
   height: 30rem;
   width: 100%;
 }
 
 .avatar {
   text-align: center;
-  margin: auto;
-  margin-bottom: 0;
+  padding-top: 2em;
   width: 100%;
 }
 
 .avatar-name {
-  color: whitesmoke;
-  font-family: "Bungee";
   margin-top: 0;
+  text-align: center;
 }
 
-  
-  @media only screen and (min-width: 1024px) {
-
-  
-    body > header:first-of-type {
-      width: 35%;
-      margin-left: auto;
-      margin-top: 10rem;
-    }
-  
-    
+@media only screen and (min-width: 1024px) {
+  body > header:first-of-type {
+    width: 35%;
+    margin-left: auto;
+    margin-top: 10rem;
   }
+}
+
+/*# sourceMappingURL=header.css.map */

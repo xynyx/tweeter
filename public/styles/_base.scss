@@ -1,0 +1,74 @@
+$font-stack: "Source Sans Pro", sans-serif;
+$font-bungee: "Bungee";
+$orange-theme: rgb(180, 66, 0);
+$blue-theme: #4056a1;
+$font-theme: rgb(255, 252, 242);
+$shadow: rgba(86, 54, 172, 0.13);
+$box-border: rgb(47, 80, 80);
+$body-color: #545149;
+
+nav {
+  background-color: $blue-theme;
+  color: $font-theme;
+  span {
+    font-family: $font-bungee;
+  }
+}
+
+#compose {
+  font-family: $font-stack;
+  color: $font-theme;
+  background-color: $blue-theme;
+}
+
+#to-compose {
+  background-color: $orange-theme;
+  &:hover {
+    box-shadow: 0.3rem 0.5rem $box-border;
+  }
+}
+
+#compose-field form {
+  border-bottom: 0.3rem solid $box-border;
+  button,
+  #counter {
+    font-family: $font-bungee;
+  }
+  button {
+    background-color: $blue-theme;
+    color: $font-theme;
+  }
+}
+
+.tweet:hover {
+  box-shadow: 0.7rem 1.1rem $shadow;
+}
+
+.handle {
+  color: $shadow;
+}
+
+.tweet {
+  border: 0.3rem solid $box-border;
+  footer {
+    border-top: 0.3rem solid $box-border;
+  }
+}
+
+body,
+main {
+  background-color: $font-theme;
+}
+
+body {
+  color: $body-color;
+  font-family: $font-stack;
+  > header:first-of-type {
+    background-color: $orange-theme;
+  }
+}
+
+.avatar-name {
+  color: $font-theme;
+  font-family: $font-bungee;
+}

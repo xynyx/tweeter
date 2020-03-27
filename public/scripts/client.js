@@ -46,10 +46,13 @@ $(() => {
     return true;
   };
 
+
   // Dynamically create HTML
   const createTweetElement = tweet => {
     const { avatars, name, handle } = tweet.user;
     const text = tweet.content.text;
+    const fullDate = new Date(tweet.created_at);
+    const date = fullDate.toLocaleDateString("en-US")
     let $tweet = `
       <article class="tweet">
         <header>
@@ -61,7 +64,7 @@ $(() => {
           ${escape(text)}
         </p>
         <footer>
-          ${tweet.created_at}
+          ${date}
           <span id="tweet-icons">
             <span id="flag"> &#127988; </span>
             <span id="reshare"> &#128257; </span>
