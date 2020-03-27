@@ -13,9 +13,9 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Extra Features
 
-* "Write a New Tweet" button at the top brings down the text area to compose in. Fancy, right?
+* "Write a New Tweet" button at the top brings down the text area to compose in. Neat eh?
 * As you scroll down the page, a button will appear in the bottom right corner that, if clicked on, will gently bring you back up to the text area to compose a new tweet.
-* Written with SASS-y flair.
+* Written with sass-y flair.
 
 ## Screenshots
 
