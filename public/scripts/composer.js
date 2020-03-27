@@ -44,7 +44,7 @@ $(() => {
     });
 
     $(window).scroll(function() {
-      if ($(this).scrollTop() < 200) {
+      if ($(this).scrollTop() < 150) {
         $("#to-compose").fadeOut(400);
       } else {
         $("#to-compose").fadeIn(400);
