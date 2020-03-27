@@ -9,7 +9,7 @@ $box-border: rgb(47, 80, 80);
 $body-color: #545149;
 
 nav {
-  background-color: $blue-theme;
+  background-color: $orange-theme;
   color: $font-theme;
   span {
     font-family: $font-bungee;
@@ -19,7 +19,7 @@ nav {
 #compose {
   font-family: $font-stack;
   color: $font-theme;
-  background-color: $blue-theme;
+  background-color: $orange-theme;
 }
 
 #to-compose {
@@ -72,4 +72,14 @@ body {
 #avatar-name {
   color: $font-theme;
   font-family: $font-bungee;
+}
+
+@media only screen and (min-width: 1024px) {
+  nav {
+    background-color: $blue-theme;
+  }
+  #compose {
+    background-color: $blue-theme;
+
+  }
 }

@@ -7,6 +7,7 @@ nav {
   z-index: 1;
   padding: 1.5em;
   width: 100%;
+  background-image: url("../images/header-background.png");
 
   span {
     font-size: 2em;
@@ -65,5 +66,11 @@ nav {
   nav {
     padding: 0.5em;
     padding-top: 1.5em;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  nav {
+    background-image: none;
   }
 }
