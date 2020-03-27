@@ -1,4 +1,4 @@
-# Tweeter Project
+# Tweeter
 
 Tweeter is a simple, single-page Twitter clone... except with a FAR better mascot. And that's what's <i>really</i> important, isn't it?
 
