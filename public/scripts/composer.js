@@ -1,17 +1,18 @@
 $(() => {
-  //TODO - MAKE IIFE OR LEAVE?
   // Check if tweet length is greater than 140 chars; turn counter red by adding class
-  $("#tweet-text").on("keyup keydown", function() {
-    let remaining = $(this).siblings("#counter")[0];
-    let textLength = $(this).val().length;
-    remaining.value = 140 - textLength;
+  (function checkTweetLengthValidity() {
+    $("#tweet-text").on("keyup keydown", function() {
+      let remaining = $(this).siblings("#counter")[0];
+      let textLength = $(this).val().length;
+      remaining.value = 140 - textLength;
 
-    if (remaining.value < 0) {
-      $(remaining).addClass("invalid");
-    } else {
-      $(remaining).removeClass("invalid");
-    }
-  });
+      if (remaining.value < 0) {
+        $(remaining).addClass("invalid");
+      } else {
+        $(remaining).removeClass("invalid");
+      }
+    });
+  })();
 
   // Modular function that shows compose tweet area
   const showCompose = () => {
@@ -36,18 +37,18 @@ $(() => {
   })();
 
   // Fixed button that brings user to top of page & opens compose tweet
-    (function bringToComposeButton() {
-      $("#to-compose").on("click", function() {
-        $(window).scrollTop(0);
-        showCompose();
-      });
+  (function bringToComposeButton() {
+    $("#to-compose").on("click", function() {
+      $("html, body").animate({ scrollTop: 0 }, 600);
+      showCompose();
+    });
 
-      $(window).scroll(function() {
-        if ($(this).scrollTop() < 300) {
-          $("#to-compose").hide();
-        } else {
-          $("#to-compose").show();
-        }
-      });
-    })();
+    $(window).scroll(function() {
+      if ($(this).scrollTop() < 200) {
+        $("#to-compose").fadeOut(400);
+      } else {
+        $("#to-compose").fadeIn(400);
+      }
+    });
+  })();
 });

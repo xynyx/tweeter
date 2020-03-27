@@ -48,13 +48,6 @@ main {
 }
 
 @media only screen and (min-width: 1024px) {
-  body {
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-flow: row wrap;
-    flex-flow: row wrap;
-    justify-content: space-evenly;
-  }
   main {
     width: 55%;
   }

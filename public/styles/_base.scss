@@ -1,6 +1,7 @@
 $font-stack: "Source Sans Pro", sans-serif;
 $font-bungee: "Bungee";
 $orange-theme: rgb(180, 66, 0);
+$clear-blue-theme: #0129ad86;
 $blue-theme: #4056a1;
 $font-theme: rgb(255, 252, 242);
 $shadow: rgba(86, 54, 172, 0.13);
@@ -22,7 +23,7 @@ nav {
 }
 
 #to-compose {
-  background-color: $orange-theme;
+  background-color: $clear-blue-theme;
   &:hover {
     box-shadow: 0.3rem 0.5rem $box-border;
   }
@@ -68,7 +69,7 @@ body {
   }
 }
 
-.avatar-name {
+#avatar-name {
   color: $font-theme;
   font-family: $font-bungee;
 }

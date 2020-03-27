@@ -13,7 +13,7 @@ nav span {
 }
 
 #to-compose {
-  background-color: #b44200;
+  background-color: #0129ad86;
 }
 #to-compose:hover {
   box-shadow: 0.3rem 0.5rem #2f5050;
@@ -59,7 +59,7 @@ body > header:first-of-type {
   background-color: #b44200;
 }
 
-.avatar-name {
+#avatar-name {
   color: #fffcf2;
   font-family: "Bungee";
 }
@@ -87,11 +87,43 @@ nav span {
   outline: none;
 }
 #compose div {
+  margin-top: 0.1em;
   text-align: center;
   padding: 0.2em;
 }
-#compose:hover > div {
-  transform: translateY(10px);
+#compose:hover {
+  text-shadow: 4px 4px 4px #291700;
+}
+
+#bounce {
+  -moz-animation: bounce 1.2s infinite;
+  -webkit-animation: bounce 1.2s infinite;
+  animation: bounce 1.2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0px);
+  }
+  40% {
+    transform: translateY(-15px);
+  }
+  60% {
+    transform: translateY(0px);
+  }
+}
+@media only screen and (max-width: 680px) {
+  #compose {
+    font-size: 1em;
+    transform: translateX(2em);
+    transform: translateY(-0.5em);
+    margin-right: 0em;
+  }
+
+  nav {
+    padding: 0.5em;
+    padding-top: 1.5em;
+  }
 }
 
 /*# sourceMappingURL=nav.css.map */

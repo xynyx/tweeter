@@ -6,26 +6,33 @@ body > header:first-of-type {
   width: 100%;
 }
 
-
 @mixin text-align($property) {
   text-align: $property;
 }
 
-.avatar {
-  @include text-align(center);
+#avatar img {
   padding-top: 2em;
-  width: 100%;
+  width: 18rem;
 }
 
-.avatar-name {
+#avatar {
+  @include text-align(center);
   margin-top: 0;
+}
+
+#avatar-name {
+  margin-top: 0;
+  transform: translateY(-1em);
   text-align: center;
 }
 
 @media only screen and (min-width: 1024px) {
   body > header:first-of-type {
+    position: fixed;
+    top: 150px;
+    left: 0;
+    margin: 3rem;
     width: 35%;
-    margin-left: auto;
-    margin-top: 10rem;
+    z-index: 5;
   }
 }

@@ -13,7 +13,7 @@ nav span {
 }
 
 #to-compose {
-  background-color: #b44200;
+  background-color: #0129ad86;
 }
 #to-compose:hover {
   box-shadow: 0.3rem 0.5rem #2f5050;
@@ -59,7 +59,7 @@ body > header:first-of-type {
   background-color: #b44200;
 }
 
-.avatar-name {
+#avatar-name {
   color: #fffcf2;
   font-family: "Bungee";
 }
@@ -70,22 +70,35 @@ body > header:first-of-type {
   width: 100%;
 }
 
-.avatar {
-  text-align: center;
+#avatar img {
   padding-top: 2em;
-  width: 100%;
+  width: 18rem;
 }
 
-.avatar-name {
+#avatar {
+  text-align: center;
   margin-top: 0;
+}
+
+#avatar-name {
+  margin-top: 0;
+  transform: translateY(-1em);
   text-align: center;
 }
 
 @media only screen and (min-width: 1024px) {
   body > header:first-of-type {
+    position: fixed;
+    top: 150px;
+    left: 0;
+    margin: 3rem;
     width: 35%;
-    margin-left: auto;
-    margin-top: 10rem;
+    z-index: 5;
+  }
+}
+@media only screen and (max-width: 680px) {
+  #tweet-list {
+    margin-left: 12em;
   }
 }
 
