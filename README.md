@@ -19,11 +19,11 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Screenshots
 
-> Mobile View
+* Mobile View
 !["Mobile view"](https://github.com/xynyx/tweeter/blob/master/docs/mobile-page.png)
-> Hover Effect
+* Hover Effect
 !["Hover effect"](https://github.com/xynyx/tweeter/blob/master/docs/hover-effect.png)
-> Desktop View
+* Desktop View
 !["Desktop view"](https://github.com/xynyx/tweeter/blob/master/docs/desktop-page.png)
 
 ## Dependencies
