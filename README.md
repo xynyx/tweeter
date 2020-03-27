@@ -19,8 +19,8 @@ This project built upon my HTML, CSS, JS, jQuery and AJAX front-end skills, as w
 
 ## Screenshots
 
-* Error message
-!["Error message"]()
+* Error Messages
+!["Error message"](https://github.com/xynyx/tweeter/blob/master/docs/error.png)
 * Hover Effect in Mobile View
 !["Hover effect; mobile view"](https://github.com/xynyx/tweeter/blob/master/docs/hover-effect.png)
 * Desktop View
