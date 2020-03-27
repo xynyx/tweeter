@@ -70,6 +70,7 @@ body > header:first-of-type {
 }
 
 #tweet-icons {
+  display: none;
   float: right;
   padding-left: 0.5rem;
   margin-right: 0.6rem;
@@ -85,7 +86,7 @@ body > header:first-of-type {
   text-shadow: 1.1px 1.1px;
   transform: skewX(0.5deg) skewY(0.05deg);
 }
-.tweet:hover .handle {
+.tweet:hover .handle, .tweet:hover #tweet-icons {
   display: inline;
 }
 .tweet header {

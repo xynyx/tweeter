@@ -6,6 +6,7 @@
 }
 
 #tweet-icons {
+  display: none;
   float: right;
   padding-left: 0.5rem;
   margin-right: 0.6rem;
@@ -19,7 +20,7 @@
   &:hover {
     text-shadow: 1.1px 1.1px;
     transform: skewX(0.5deg) skewY(0.05deg);
-    .handle {
+    .handle, #tweet-icons {
       display: inline;
     }
   }
