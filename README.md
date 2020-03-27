@@ -20,7 +20,7 @@ This repository is the starter code for the project: Students will fork and clon
 ## Screenshots
 
 * Error message
-!["Error message"](https://github.com/xynyx/tweeter/blob/master/docs/error.png)
+!["Error message"]()
 * Hover Effect in Mobile View
 !["Hover effect; mobile view"](https://github.com/xynyx/tweeter/blob/master/docs/hover-effect.png)
 * Desktop View
