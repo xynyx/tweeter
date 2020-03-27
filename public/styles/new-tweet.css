@@ -122,7 +122,7 @@ body > header:first-of-type {
 
 @media only screen and (min-width: 1024px) {
   #compose-field {
-    transform: translateX(12em);
+    transform: translateX(35%);
   }
 }
 
