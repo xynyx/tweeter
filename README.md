@@ -30,4 +30,6 @@ This project built upon my HTML, CSS, JS, jQuery and AJAX front-end skills, as w
 
 - Express
 - Node 5.10.x or above
+- Chance
+- Body-parser
 - Sass
