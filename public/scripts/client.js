@@ -1,4 +1,17 @@
 $(() => {
+  // Load rendered tweets on page
+  const loadTweets = () => {
+    $.ajax({
+      url: "/tweets/",
+      method: "GET",
+      dataType: "JSON",
+      success: response => {
+        renderTweets(response);
+      }
+    });
+  };
+  loadTweets();
+  
   // Collect and post submit data if valid
   const $form = $("main form");
   $form.submit(function(event) {
@@ -20,13 +33,12 @@ $(() => {
 
   // Escape user input to prevent CSS (Cross-Site Scripting)
   const escape = function(str) {
-    // REFACTOR?
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
     return div.innerHTML;
   };
 
-  // Check if tweet is valid
+  // Check if tweet is valid; add class that changes colour of counter if not
   const checkTweetValidity = () => {
     const textLength = $("#tweet-text").val().length;
     $("#noChars, #maxChars")
@@ -84,17 +96,4 @@ $(() => {
     }
     $("#tweet-list").html(tweetData.reverse().join(""));
   };
-
-  // Load rendered tweets on page
-  const loadTweets = () => {
-    $.ajax({
-      url: "/tweets/",
-      method: "GET",
-      dataType: "JSON",
-      success: response => {
-        renderTweets(response);
-      }
-    });
-  };
-  loadTweets();
 });

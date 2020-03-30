@@ -1,4 +1,12 @@
 $(() => {
+  // Modular function that shows compose tweet area
+  const showCompose = () => {
+    $("#compose-field")
+      .removeClass("invisible")
+      .show({ duration: 250, easing: "swing" });
+    $("#tweet-text").focus();
+  };
+
   // Check if tweet length is greater than 140 chars; turn counter red by adding class
   (function checkTweetLengthValidity() {
     $("#tweet-text").on("keyup keydown", function() {
@@ -14,14 +22,6 @@ $(() => {
     });
   })();
 
-  // Modular function that shows compose tweet area
-  const showCompose = () => {
-    $("#compose-field")
-      .removeClass("invisible")
-      .show({ duration: 150, easing: "swing" });
-    $("#tweet-text").focus();
-  };
-
   // Button on navbar that closes/opens compose tweet area
   (function toggleComposeButton() {
     $("#compose").click(() => {
@@ -30,7 +30,7 @@ $(() => {
         showCompose();
       } else {
         composeField
-          .hide({ duration: 50, easing: "linear" })
+          .hide({ duration: 150, easing: "linear" })
           .addClass("invisible");
       }
     });
@@ -42,7 +42,8 @@ $(() => {
       $("html, body").animate({ scrollTop: 0 }, 600);
       showCompose();
     });
-
+    // If window is far enough away from the compose area, show the button
+    // If window is near the compose area, hide the button
     $(window).scroll(function() {
       if ($(this).scrollTop() < 150) {
         $("#to-compose").fadeOut(400);
